@@ -30,6 +30,16 @@ func loadPage(title string) (*Page, error) {
 	return &Page{Title: title, Body: body}, nil
 }
 
+func frontHandler(w http.ResponseWriter, r *http.Request) {
+	title := "FrontPage"
+	p, err := loadPage(title)
+	if err != nil {
+		http.Redirect(w, r, "/edit/FrontPage", http.StatusFound)
+		return
+	}
+	renderTemplate(w, "view", p)
+}
+
 func viewHandler(w http.ResponseWriter, r *http.Request, title string) {
 	p, err := loadPage(title)
 	if err != nil {
@@ -81,6 +91,7 @@ func makeHandler(fn func(http.ResponseWriter, *http.Request, string)) http.Handl
 }
 
 func main() {
+	http.HandleFunc("/{$}", frontHandler)
 	http.HandleFunc("/view/", makeHandler(viewHandler))
 	http.HandleFunc("/edit/", makeHandler(editHandler))
 	http.HandleFunc("/save/", makeHandler(saveHandler))
