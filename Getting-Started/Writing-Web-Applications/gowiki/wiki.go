@@ -45,7 +45,6 @@ func editHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		p = &Page{Title: title}
 	}
-	t, _ := template.ParseFiles("edit.html")
 	renderTemplate(w, "edit", p)
 }
 
