@@ -49,3 +49,13 @@ div {
     margin-bottom: 23px;
     box-shadow: 6px 6px 6px var(--jordan-black);
 }
+
+textarea {
+    width: 98%;
+    height: 6px;
+    max-height: 23px;
+    font-family: monospace;
+    padding: 6px;
+    border: 6px solid var(--jordan-black);
+    background-color: var(--jordan-aged-white);
+}
