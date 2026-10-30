@@ -59,3 +59,15 @@ textarea {
     border: 6px solid var(--jordan-black);
     background-color: var(--jordan-aged-white);
 }
+
+input[type="submit"], button {
+    background-color: var(--jordan-black);
+    color: var(--jordan-white);
+    font-family: "Haettenschweiler", "Impact", sans-serif;
+    font-size: 0.98rem;
+    padding: 6px 23px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
