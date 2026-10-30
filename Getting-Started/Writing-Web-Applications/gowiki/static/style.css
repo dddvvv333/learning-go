@@ -71,3 +71,7 @@ input[type="submit"], button {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+input[type="submit"]:hover, button:hover {
+  background-color: var(--jordan-red);
+}
