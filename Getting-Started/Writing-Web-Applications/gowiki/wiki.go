@@ -30,6 +30,17 @@ func loadPage(title string) (*Page, error) {
 	return &Page{Title: title, Body: body}, nil
 }
 
+var linkRegexp = regexp.MustCompile(`\[([a-zA-Z0-9]+)\]`)
+
+func (p *Page) HTMLBody() template.HTML {
+	processed := linkRegexp.ReplaceAllFunc(p.Body, func(b []byte) []byte {
+		// Extract the page name from inside the brackets
+		name := b[1 : len(b)-1]
+		return []byte(`<a href="/view/` + string(name) + `">` + string(name) + `</a>`)
+	})
+	return template.HTML(processed)
+}
+
 func frontHandler(w http.ResponseWriter, r *http.Request) {
 	title := "FrontPage"
 	p, err := loadPage(title)
