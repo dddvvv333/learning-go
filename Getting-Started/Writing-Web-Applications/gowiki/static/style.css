@@ -41,3 +41,11 @@ a {
 a:hover {
     color: var(--jordan-red);
 }
+
+div {
+    background-color: var(--jordan-white);
+    border: 6px solid var(--jordan-black);
+    padding: 23px;
+    margin-bottom: 23px;
+    box-shadow: 6px 6px 6px var(--jordan-black);
+}
