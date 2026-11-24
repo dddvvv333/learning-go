@@ -1,3 +1,3 @@
-module ATourofGo/2/imports
+module ATourofGo/basics/2
 
 go 1.27.4

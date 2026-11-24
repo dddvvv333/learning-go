@@ -1,3 +1,3 @@
-module ATourofGo/12/zero
+module ATourofGo/basics/12
 
 go 1.27.4

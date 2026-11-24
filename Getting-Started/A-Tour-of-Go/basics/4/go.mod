@@ -1,3 +1,3 @@
-module ATourofGo/4/functions
+module ATourofGo/basics/4
 
 go 1.27.4

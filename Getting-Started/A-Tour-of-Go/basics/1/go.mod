@@ -1,3 +1,3 @@
-module ATourofGo/1/packages
+module ATourofGo/basics/1
 
 go 1.24.4

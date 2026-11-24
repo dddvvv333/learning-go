@@ -1,3 +1,3 @@
-module ATourofGo/13/type-conversions
+module ATourofGo/basics/13
 
 go 1.27.4

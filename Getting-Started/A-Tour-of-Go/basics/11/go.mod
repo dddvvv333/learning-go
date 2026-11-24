@@ -1,3 +1,3 @@
-module ATourofGo/11/basic-types
+module ATourofGo/basics/11
 
 go 1.27.4
